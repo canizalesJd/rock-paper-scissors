@@ -1,21 +1,45 @@
+// Array of choice
 const choices = ["rock", "paper", "scissors"];
 
-const getComputerChoice = () => {
-	return Math.floor(Math.random() * 3);
+// Get computer choice
+const computerSelection = () => {
+	return choices[Math.floor(Math.random() * 3)];
 };
 
+// Get player choice
 const playerSelection = () => {
 	return prompt("Rock, Paper, Scissors?").toLowerCase().trim();
 };
 
-const computerSelection = choices[getComputerChoice()];
-
 function game() {
+	// Declaring variables
+	let round;
+	let computerScore = 0;
+	let playerScore = 0;
+	// Play 5 rounds
 	for (let i = 0; i < 5; i++) {
-		console.log(playRound(playerSelection(), computerSelection));
+		// Get round result
+		round = playRound(playerSelection(), computerSelection());
+		// Don't count the round if it's invalid
+		if (round === "Invalid input") {
+			i--;
+		}
+		// Update score
+		if (round.includes("Win")) {
+			playerScore++;
+		} else if (round.includes("Lose")) {
+			computerScore++;
+		}
+	}
+	// Show score
+	if (playerScore > computerScore) {
+		return alert("You've Won!");
+	} else {
+		return alert("You've Lost!");
 	}
 }
 
+// Round logic
 function playRound(playerSelection, computerSelection) {
 	switch (playerSelection) {
 		case "rock":
