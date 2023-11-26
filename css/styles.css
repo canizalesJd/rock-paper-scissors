@@ -26,10 +26,17 @@ h1 {
 
 .game-container {
   max-width: 90vw;
+  margin: auto;
   width: 700px;
   padding: 20px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-container {
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -67,4 +74,10 @@ button:hover {
 
 .start-game-button {
   font-size: 1rem;
+}
+
+@media screen and (max-width: 430px) {
+  .button-container {
+    flex-direction: column;
+  }
 }

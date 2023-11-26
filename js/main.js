@@ -127,7 +127,6 @@ const updateRoundResult = (round) => {
 // Main Game function
 const game = (round) => {
   // Play 5 rounds
-  console.log(playerScore, computerScore);
   while (playerScore < 5 && computerScore < 5) {
     updateRoundResult(round);
     if (round.includes("Win")) {
