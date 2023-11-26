@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap");
 
 * {
   margin: 0;
@@ -14,20 +14,20 @@ body {
   align-items: center;
   width: 100vw;
   height: 100vh;
+  background-color: #fafafa;
+  color: #212121;
 }
 
 h1 {
   font-weight: 900;
   font-size: 2.5rem;
+  text-align: center;
 }
 
 .game-container {
   max-width: 90vw;
   width: 700px;
   padding: 20px;
-}
-
-.game-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -36,13 +36,13 @@ h1 {
 
 .score-container {
   width: 100%;
-  padding: 20px;
   display: flex;
   justify-content: center;
 }
 
 .round-result {
   padding: 20px;
+  font-size: 1.7rem;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -50,12 +50,19 @@ h1 {
 
 button {
   border: none;
+  background: #dadada;
+
   padding: 14px 17px;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   cursor: pointer;
-  margin: 10px;
-  font-size: 3rem;
+  margin: 20px;
+  font-size: 2.5rem;
+  border-radius: 10px;
+}
+
+button:hover {
+  background: #cccccc;
 }
 
 .start-game-button {
